@@ -6,16 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>hexo的用法介绍 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="安装：(我是用homebrew安装的)node.js
+git (全局安装)
+npm install  -g hero-cli
+应用 项目中hero init
+npm install
+hexo new “name” 新建
+hero generate 生成静态页面
+hexo server 启动服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo的用法介绍">
 <meta property="og:url" content="https://viviannow.github.io/2016/07/07/hexo的用法介绍/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-07-07T00:54:52.000Z">
+<meta property="og:description" content="安装：(我是用homebrew安装的)node.js
+git (全局安装)
+npm install  -g hero-cli
+应用 项目中hero init
+npm install
+hexo new “name” 新建
+hero generate 生成静态页面
+hexo server 启动服务器">
+<meta property="og:updated_time" content="2016-08-10T13:57:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo的用法介绍">
-<meta name="twitter:description">
+<meta name="twitter:description" content="安装：(我是用homebrew安装的)node.js
+git (全局安装)
+npm install  -g hero-cli
+应用 项目中hero init
+npm install
+hexo new “name” 新建
+hero generate 生成静态页面
+hexo server 启动服务器">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -33,7 +54,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="null" class="js-avatar">
+			<img lazy-src="https://avatars0.githubusercontent.com/u/7972293?v=3&amp;s=460" class="js-avatar">
 			
 		</a>
 
@@ -73,12 +94,12 @@
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
 						<li>Menu</li>
-						<li>Tags</li>
+						<li>Тэги</li>
 						
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>О сайте</li>
 						
 					</ul>
 				</div>
@@ -102,11 +123,7 @@
 							
 								<a class="github" target="_blank" href="https://github.com/viviannow" title="github">github</a>
 					        
-								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-					        
-								<a class="rss" target="_blank" href="#" title="rss">rss</a>
-					        
-								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lao-wei-2-13" title="zhihu">zhihu</a>
 					        
 						</div>
 					</nav>
@@ -115,7 +132,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/前端面试题/" style="font-size: 10px;">前端面试题</a>
+						<a href="/tags/前端面试题/" style="font-size: 10px;">前端面试题</a>
 					</div>
 				</section>
 				
@@ -163,7 +180,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="null" class="js-avatar">
+				<img lazy-src="https://avatars0.githubusercontent.com/u/7972293?v=3&amp;s=460" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -185,11 +202,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/viviannow" title="github">github</a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lao-wei-2-13" title="zhihu">zhihu</a>
 			        
 				</div>
 			</nav>
@@ -230,7 +243,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="安装：-我是用homebrew安装的"><a href="#安装：-我是用homebrew安装的" class="headerlink" title="安装：(我是用homebrew安装的)"></a>安装：(我是用homebrew安装的)</h1><pre><code>node.js
+git (全局安装)
+npm install  -g hero-cli
+</code></pre><h1 id="应用-项目中"><a href="#应用-项目中" class="headerlink" title="应用 项目中"></a>应用 项目中</h1><pre><code>hero init
+npm install
+hexo new “name” 新建
+hero generate 生成静态页面
+hexo server 启动服务器
+</code></pre><a id="more"></a>
+<h1 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h1><p> nam install heao-deployer-git —save</p>
+<p> _config.yml<br>    deploy:<br>     type: git<br>     repo: <a href="https://github.com/name/name.io.git" target="_blank" rel="external">https://github.com/name/name.io.git</a><br>     branch: master<br>    这个东西格式很重要。</p>
+<pre><code>hero deploy 同步
+</code></pre><h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><pre><code>hero clean
+hero generate （g）
+hero deploy (d)
+</code></pre><p>删除文章 在source-&gt;_posts 中把文章给删除了 再clean 然后重新hexo g ,hexo d就可以。</p>
+
       
     </div>
     
@@ -248,11 +277,6 @@
       </div>
     </a>
   
-  
-    <a href="/2016/06/26/how-use-hexo-in-mac/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">how use hexo in mac</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
   
 </nav>
 
@@ -281,26 +305,6 @@
 
 
 
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hexo的用法介绍" data-title="hexo的用法介绍" data-url="https://viviannow.github.io/2016/07/07/hexo的用法介绍/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
 
 
 
