@@ -4,39 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>hexo的用法介绍 | Hexo</title>
+  <title>jQuery用法与tips总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装：(我是用homebrew安装的)node.js
-git (全局安装)
-npm install  -g hero-cli
-应用 项目中hero init
-npm install
-hexo new “name” 新建
-hero generate 生成静态页面
-hexo server 启动服务器">
+  <meta name="description" content="用的时候注意下版本号，查看下对应的API">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo的用法介绍">
-<meta property="og:url" content="https://viviannow.github.io/2016/07/07/hexo的用法介绍/index.html">
+<meta property="og:title" content="jQuery用法与tips总结">
+<meta property="og:url" content="https://viviannow.github.io/2016/09/04/jQuery用法与tips总结/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="安装：(我是用homebrew安装的)node.js
-git (全局安装)
-npm install  -g hero-cli
-应用 项目中hero init
-npm install
-hexo new “name” 新建
-hero generate 生成静态页面
-hexo server 启动服务器">
-<meta property="og:updated_time" content="2016-08-22T14:09:24.000Z">
+<meta property="og:description" content="用的时候注意下版本号，查看下对应的API">
+<meta property="og:updated_time" content="2016-09-04T14:21:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo的用法介绍">
-<meta name="twitter:description" content="安装：(我是用homebrew安装的)node.js
-git (全局安装)
-npm install  -g hero-cli
-应用 项目中hero init
-npm install
-hexo new “name” 新建
-hero generate 生成静态页面
-hexo server 启动服务器">
+<meta name="twitter:title" content="jQuery用法与tips总结">
+<meta name="twitter:description" content="用的时候注意下版本号，查看下对应的API">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -210,11 +189,11 @@ hexo server 启动服务器">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hexo的用法介绍" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-jQuery用法与tips总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/07/hexo的用法介绍/" class="article-date">
-  	<time datetime="2016-07-07T00:54:52.000Z" itemprop="datePublished">2016-07-07</time>
+      <a href="/2016/09/04/jQuery用法与tips总结/" class="article-date">
+  	<time datetime="2016-09-04T01:55:15.000Z" itemprop="datePublished">2016-09-04</time>
 </a>
     </div>
   
@@ -227,7 +206,7 @@ hexo server 启动服务器">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo的用法介绍
+      jQuery用法与tips总结
     </h1>
   
 
@@ -236,7 +215,7 @@ hexo server 启动服务器">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li></ul>
 	</div>
 
         
@@ -247,23 +226,30 @@ hexo server 启动服务器">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="安装：-我是用homebrew安装的"><a href="#安装：-我是用homebrew安装的" class="headerlink" title="安装：(我是用homebrew安装的)"></a>安装：(我是用homebrew安装的)</h1><pre><code>node.js
-git (全局安装)
-npm install  -g hero-cli
-</code></pre><h1 id="应用-项目中"><a href="#应用-项目中" class="headerlink" title="应用 项目中"></a>应用 项目中</h1><pre><code>hero init
-npm install
-hexo new “name” 新建
-hero generate 生成静态页面
-hexo server 启动服务器
-</code></pre><a id="more"></a>
-<h1 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h1><p> nam install heao-deployer-git —save</p>
-<p> _config.yml<br>    deploy:<br>     type: git<br>     repo: <a href="https://github.com/name/name.io.git" target="_blank" rel="external">https://github.com/name/name.io.git</a><br>     branch: master<br>    这个东西格式很重要。</p>
-<pre><code>hero deploy 同步
-</code></pre><h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><pre><code>hero clean
-hero generate （g）
-hero deploy (d)
-</code></pre><p>删除文章 在source-&gt;_posts 中把文章给删除了 再clean 然后重新hexo g ,hexo d就可以。</p>
+        <p>用的时候注意下版本号，查看下对应的API   </p>
+<a id="more"></a>
+<h3 id="插件注意"><a href="#插件注意" class="headerlink" title="插件注意"></a>插件注意</h3><h3 id="ajax注意"><a href="#ajax注意" class="headerlink" title="ajax注意"></a>ajax注意</h3><pre><code>$(&apos;#btn&apos;).click(function(){
+    $.ajax({
+        type:&quot;GET&quot;,
+         url:&quot;index.txt&quot;,
+         success:function(data){
+             $(&apos;#content&apos;),html(data);
+        },
+        failure:function(){
 
+    }
+    });
+});
+async:true （默认） 表示异步，$.ajax后面的会先执行，回调函数在发送请求成功后才会调用。  
+type:get（默认） ，最好用post，且文件传输时只能能post
+dataType:请求返回的数据类型，jq会自动把服务器返回的json字符串转成js对象，如果不指定要手工eval函数转换。（可用 xml,html,script,json,jsonp,text）
+
+tips:
+如ajax请求到了index.txt=&gt; 执行 alert(index.txt)
+innerHTML 完全无法执行由ajax得到的script标签内的脚本
+zepto.js与jq:可以执行由ajax得到的script标签中的内联脚本 scrtip 中
+jquery:可以请求到由ajax得到的script标签的外部请求的文件。script src=&quot;&quot;
+</code></pre>
       
     </div>
     
@@ -272,15 +258,11 @@ hero deploy (d)
     
 <nav id="article-nav">
   
-    <a href="/2016/07/07/前端工程师面试题汇总/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          前端工程师面试题汇总
-        
-      </div>
-    </a>
   
+    <a href="/2016/09/04/问题总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">问题总结</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 

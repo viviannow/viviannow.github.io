@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>sass总结 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="以前一直零散的在用sass，没有系统的做一下整理，最近换了电脑用sass的时候又遇到了各种问题，不记得自己安装过什么依赖，什么软件，因为安装得太多了，把以前的弯路又走了一回。以下只是sass相关，非gulp，webpack下安装，后期我自己乱了，理解成没有gulp,webpack等sass是没法自己存在的。又一次说明了整理的重要性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass总结">
+<meta property="og:url" content="https://viviannow.github.io/2016/09/04/sass总结/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="以前一直零散的在用sass，没有系统的做一下整理，最近换了电脑用sass的时候又遇到了各种问题，不记得自己安装过什么依赖，什么软件，因为安装得太多了，把以前的弯路又走了一回。以下只是sass相关，非gulp，webpack下安装，后期我自己乱了，理解成没有gulp,webpack等sass是没法自己存在的。又一次说明了整理的重要性。">
+<meta property="og:updated_time" content="2016-09-04T01:31:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sass总结">
+<meta name="twitter:description" content="以前一直零散的在用sass，没有系统的做一下整理，最近换了电脑用sass的时候又遇到了各种问题，不记得自己安装过什么依赖，什么软件，因为安装得太多了，把以前的弯路又走了一回。以下只是sass相关，非gulp，webpack下安装，后期我自己乱了，理解成没有gulp,webpack等sass是没法自己存在的。又一次说明了整理的重要性。">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://avatars0.githubusercontent.com/u/7972293?v=3&amp;s=460" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">viviannow</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/viviannow" title="github">github</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lao-wei-2-13" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/ECMAScript/" style="font-size: 10px;">ECMAScript</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/mac/" style="font-size: 10px;">mac</a> <a href="/tags/sass用法说明/" style="font-size: 10px;">sass用法说明</a> <a href="/tags/sublime-text/" style="font-size: 10px;">sublime text</a> <a href="/tags/前端-网址/" style="font-size: 10px;">前端 网址</a> <a href="/tags/前端问题/" style="font-size: 10px;">前端问题</a> <a href="/tags/前端面试题/" style="font-size: 10px;">前端面试题</a> <a href="/tags/验证插件-jquery-plugin-validate/" style="font-size: 10px;">验证插件 jquery-plugin-validate</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">viviannow</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="https://avatars0.githubusercontent.com/u/7972293?v=3&amp;s=460" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">viviannow</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/viviannow" title="github">github</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/lao-wei-2-13" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-sass总结" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/04/sass总结/" class="article-date">
+  	<time datetime="2016-09-03T16:11:58.000Z" itemprop="datePublished">2016-09-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      sass总结
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sass用法说明/">sass用法说明</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>以前一直零散的在用sass，没有系统的做一下整理，最近换了电脑用sass的时候又遇到了各种问题，不记得自己安装过什么依赖，什么软件，因为安装得太多了，把以前的弯路又走了一回。<br>以下只是sass相关，非gulp，webpack下安装，后期我自己乱了，理解成没有gulp,webpack等sass是没法自己存在的。又一次说明了整理的重要性。<br><a id="more"></a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>依赖于ruby，不过mac下自带ruby。这个要注意下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">gem install sass 安装 （mac下 sudo gem install sass）</div><div class="line">sass -v 查看版本，如显示版本说明安装成功</div><div class="line">sass -h 帮助   </div><div class="line">gem update sass 升级sass   </div><div class="line"></div><div class="line">以下是安全上网的镜向方法(镜向)   </div><div class="line">gem source --remove https://rubygems.org/   </div><div class="line">gem source -a https://ruby.taobao.org/ 指向taobao  </div><div class="line">gem sources -l</div></pre></td></tr></table></figure></p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sass folder/style.scss:css/style.css  --style compact 编译   后面是类型</div><div class="line">sass --watch folder/style.scss:css/style.css 监视模式</div></pre></td></tr></table></figure>
+<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>sass有以下两种<br>.sass（写法太超前，不推荐）<br>.scss（类css的语法） </p>
+<h3 id="编译类型"><a href="#编译类型" class="headerlink" title="编译类型"></a>编译类型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">nested 嵌套（默认）</div><div class="line">compact 紧凑 （一行显示）</div><div class="line">compressed 压缩（上线）</div><div class="line">expanded 扩展（类css格式）</div></pre></td></tr></table></figure>
+<h3 id="常用用法如下："><a href="#常用用法如下：" class="headerlink" title="常用用法如下："></a>常用用法如下：</h3><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$primaryColor:#333;</div><div class="line">$primaryBorder:1px solid $primaryColor;</div><div class="line">div&#123;</div><div class="line">	color:$primaryColor;</div><div class="line">	border:$primaryBorder;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">选择器</div><div class="line">ul&#123;</div><div class="line">	color:#333;</div><div class="line">	li&#123;</div><div class="line">		color:#666;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">属性</div><div class="line">nav&#123;</div><div class="line">	border:&#123;</div><div class="line">		style:solid;</div><div class="line">		left:&#123;</div><div class="line">			width:4px;</div><div class="line">			color:#333;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">A:_rest.scss</div><div class="line">B: base.css</div><div class="line">C: use.scss</div><div class="line">	@import &quot;rest&quot;; 整合</div><div class="line">	@import &quot;base.css&quot; 直接显示</div></pre></td></tr></table></figure>
+<h4 id="扩展-amp-继承"><a href="#扩展-amp-继承" class="headerlink" title="扩展&amp;继承"></a>扩展&amp;继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">.message&#123;color:#333;&#125;</div><div class="line">.subMessage&#123;@extend .message;&#125;</div></pre></td></tr></table></figure>
+<h4 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$linkColor:#333;</div><div class="line">a&#123;</div><div class="line">	color:linkColor;</div><div class="line">	&amp;:hover&#123;</div><div class="line">		color:darken($linkColor,10%);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="多值变量"><a href="#多值变量" class="headerlink" title="多值变量"></a>多值变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$linkColor : #333 #666 !default;</div><div class="line">a&#123;</div><div class="line">	color:nth($linkColor,1);</div><div class="line">	&amp;:hover&#123;</div><div class="line">		color:nth($linkColor,2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">%fl&#123;</div><div class="line">	float:left;	</div><div class="line">&#125;</div><div class="line">div&#123;</div><div class="line">	@extend %fl;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">article&#123;</div><div class="line">	width:600px/960px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>待补充…</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/04/问题总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          问题总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/01/sublime-text/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sublime text</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 viviannow
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
