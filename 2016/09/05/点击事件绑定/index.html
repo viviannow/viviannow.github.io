@@ -4,14 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/8 | Hexo</title>
+  <title>DOM事件 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://viviannow.github.io/archives/2016/08/index.html">
+  <meta name="description" content="一直想写自己总结的东西,可是总是没有总结到东西,所以一进在看别人的总结,记录并加以修改。这篇文章是segmentFault上的,但没看到作者,如要看原文章,可以去segmengFault上去找找看
+DOM级别与DOM事件DOM级别 : DOM0 DOM1 DOM2 DOM3DOM事件 : DOMO级事件 DOM2级事件 DOM3级事件  
+DOM0级事件DOM0级事件就是把一个函数赋值给一个事件处">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM事件">
+<meta property="og:url" content="https://viviannow.github.io/2016/09/05/点击事件绑定/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一直想写自己总结的东西,可是总是没有总结到东西,所以一进在看别人的总结,记录并加以修改。这篇文章是segmentFault上的,但没看到作者,如要看原文章,可以去segmengFault上去找找看
+DOM级别与DOM事件DOM级别 : DOM0 DOM1 DOM2 DOM3DOM事件 : DOMO级事件 DOM2级事件 DOM3级事件  
+DOM0级事件DOM0级事件就是把一个函数赋值给一个事件处">
+<meta property="og:updated_time" content="2016-10-09T09:50:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="DOM事件">
+<meta name="twitter:description" content="一直想写自己总结的东西,可是总是没有总结到东西,所以一进在看别人的总结,记录并加以修改。这篇文章是segmentFault上的,但没看到作者,如要看原文章,可以去segmengFault上去找找看
+DOM级别与DOM事件DOM级别 : DOM0 DOM1 DOM2 DOM3DOM事件 : DOMO级事件 DOM2级事件 DOM3级事件  
+DOM0级事件DOM0级事件就是把一个函数赋值给一个事件处">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -185,146 +195,104 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-点击事件绑定" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/09/05/点击事件绑定/" class="article-date">
+  	<time datetime="2016-09-05T14:18:02.000Z" itemprop="datePublished">2016-09-05</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DOM事件
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js-事件绑定/">js 事件绑定</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/29/我最近在用的插件什么的/" class="archive-article-date">
-  	<time datetime="2016-08-29T13:34:25.000Z" itemprop="datePublished">Aug 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/29/我最近在用的插件什么的/">jquery插件</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一直想写自己总结的东西,可是总是没有总结到东西,所以一进在看别人的总结,记录并加以修改。这篇文章是segmentFault上的,但没看到作者,如要看原文章,可以去segmengFault上去找找看</p>
+<h2 id="DOM级别与DOM事件"><a href="#DOM级别与DOM事件" class="headerlink" title="DOM级别与DOM事件"></a>DOM级别与DOM事件</h2><p>DOM级别 : DOM0 DOM1 DOM2 DOM3<br>DOM事件 : DOMO级事件 DOM2级事件 DOM3级事件  </p>
+<h2 id="DOM0级事件"><a href="#DOM0级事件" class="headerlink" title="DOM0级事件"></a>DOM0级事件</h2><p>DOM0级事件就是把一个函数赋值给一个事件处理属性,无法绑定多个处理函数。<br>var btn = document.getElementById(‘btn’);<br>btn.onclick = function(){<br>alert(1)<br>}<br>btn.onclick = null;//解绑事件</p>
+<h2 id="DOM2级事件"><a href="#DOM2级事件" class="headerlink" title="DOM2级事件"></a>DOM2级事件</h2><p>btn.addEventListener(‘click’,showFn,false);<br>bnt.addEventListener(‘mouseover’,showFn,false);<br>btn.removeEventListener(‘click’,showFn,false);<br>IE8及以要用以下方法:IE8及以下不支持泡泡事件<br>btn.attachEvent(‘click’,showFn);<br>btn.detachEvent(‘click’,showFn);  </p>
+<h2 id="DOM3级事件-在DOM2级事件的基础下加了更多的事件类型"><a href="#DOM3级事件-在DOM2级事件的基础下加了更多的事件类型" class="headerlink" title="DOM3级事件   在DOM2级事件的基础下加了更多的事件类型"></a>DOM3级事件   在DOM2级事件的基础下加了更多的事件类型</h2><p>UI事件:load scroll<br>焦点事件:blur focus<br>鼠标事件:dbclick mouseup<br>滚轮事件:mousewheel<br>文件事件:<br>键盘事件:<br>变动事件:</p>
+<h2 id="DOM事件流"><a href="#DOM事件流" class="headerlink" title="DOM事件流"></a>DOM事件流</h2><p>addEventListener<br>true 在捕获阶段执行<br>false 在泡泡阶段执行<br>阻止泡泡事件</p>
+<p>child.addEventListener(‘click’,function(e){<br>    alert(1);<br>    e.shopPropagation();<br>},false);</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/验证插件-jquery-plugin-validate/">验证插件 jquery-plugin-validate</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/23/ES6-新特性/" class="archive-article-date">
-  	<time datetime="2016-08-23T01:17:34.000Z" itemprop="datePublished">Aug 23</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/23/ES6-新特性/">ES6 新特性</a>
-    </h1>
+    <a href="/2016/10/09/JS-事件对象/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JS-事件对象
+        
+      </div>
+    </a>
   
+  
+    <a href="/2016/09/04/jQuery用法与tips总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery用法与tips总结</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript/">ECMAScript</a></li></ul>
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/23/mac-使用记录/" class="archive-article-date">
-  	<time datetime="2016-08-23T00:47:15.000Z" itemprop="datePublished">Aug 23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/23/mac-使用记录/">mac 使用记录</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/08/22/前端网址收集/" class="archive-article-date">
-  	<time datetime="2016-08-22T13:57:47.000Z" itemprop="datePublished">Aug 22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/08/22/前端网址收集/">前端网址收集</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端-网址/">前端 网址</a></li></ul>
-	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 </div>
       <footer id="footer">
@@ -350,8 +318,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

@@ -4,39 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>hexo的用法介绍 | Hexo</title>
+  <title>JQ-绑定事件 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装：(我是用homebrew安装的)node.js
-git (全局安装)
-npm install  -g hero-cli
-应用 项目中hero init
-npm install
-hexo new “name” 新建
-hero generate 生成静态页面
-hexo server 启动服务器">
+  <meta name="description" content="其实.bind(), .live(), .delegate()都是通过.on()来实现的  
+stopPropagation()函数用于阻止当前事件在DOM树上冒泡。该函数只阻止事件向祖辈元素的传播，不会阻止该元素自身绑定的其他事件处理函数的函数。event.stopImmediatePropagation()不仅会阻止事件向祖辈元素的传播，还会阻止该元素绑定的其他(尚未执行的)事件处理函数的执行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo的用法介绍">
-<meta property="og:url" content="https://viviannow.github.io/2016/07/07/hexo的用法介绍/index.html">
+<meta property="og:title" content="JQ-绑定事件">
+<meta property="og:url" content="https://viviannow.github.io/2016/10/09/JQ-绑定事件/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="安装：(我是用homebrew安装的)node.js
-git (全局安装)
-npm install  -g hero-cli
-应用 项目中hero init
-npm install
-hexo new “name” 新建
-hero generate 生成静态页面
-hexo server 启动服务器">
-<meta property="og:updated_time" content="2016-08-22T14:09:24.000Z">
+<meta property="og:description" content="其实.bind(), .live(), .delegate()都是通过.on()来实现的  
+stopPropagation()函数用于阻止当前事件在DOM树上冒泡。该函数只阻止事件向祖辈元素的传播，不会阻止该元素自身绑定的其他事件处理函数的函数。event.stopImmediatePropagation()不仅会阻止事件向祖辈元素的传播，还会阻止该元素绑定的其他(尚未执行的)事件处理函数的执行">
+<meta property="og:updated_time" content="2016-10-09T09:51:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo的用法介绍">
-<meta name="twitter:description" content="安装：(我是用homebrew安装的)node.js
-git (全局安装)
-npm install  -g hero-cli
-应用 项目中hero init
-npm install
-hexo new “name” 新建
-hero generate 生成静态页面
-hexo server 启动服务器">
+<meta name="twitter:title" content="JQ-绑定事件">
+<meta name="twitter:description" content="其实.bind(), .live(), .delegate()都是通过.on()来实现的  
+stopPropagation()函数用于阻止当前事件在DOM树上冒泡。该函数只阻止事件向祖辈元素的传播，不会阻止该元素自身绑定的其他事件处理函数的函数。event.stopImmediatePropagation()不仅会阻止事件向祖辈元素的传播，还会阻止该元素绑定的其他(尚未执行的)事件处理函数的执行">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -210,11 +192,11 @@ hexo server 启动服务器">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hexo的用法介绍" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JQ-绑定事件" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/07/hexo的用法介绍/" class="article-date">
-  	<time datetime="2016-07-07T00:54:52.000Z" itemprop="datePublished">2016-07-07</time>
+      <a href="/2016/10/09/JQ-绑定事件/" class="article-date">
+  	<time datetime="2016-10-09T09:35:30.000Z" itemprop="datePublished">2016-10-09</time>
 </a>
     </div>
   
@@ -227,7 +209,7 @@ hexo server 启动服务器">
         
   
     <h1 class="article-title" itemprop="name">
-      hexo的用法介绍
+      JQ-绑定事件
     </h1>
   
 
@@ -236,7 +218,7 @@ hexo server 启动服务器">
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JQ-事件绑定-冒泡/">JQ 事件绑定 冒泡</a></li></ul>
 	</div>
 
         
@@ -247,22 +229,14 @@ hexo server 启动服务器">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="安装：-我是用homebrew安装的"><a href="#安装：-我是用homebrew安装的" class="headerlink" title="安装：(我是用homebrew安装的)"></a>安装：(我是用homebrew安装的)</h1><pre><code>node.js
-git (全局安装)
-npm install  -g hero-cli
-</code></pre><h1 id="应用-项目中"><a href="#应用-项目中" class="headerlink" title="应用 项目中"></a>应用 项目中</h1><pre><code>hero init
-npm install
-hexo new “name” 新建
-hero generate 生成静态页面
-hexo server 启动服务器
-</code></pre><a id="more"></a>
-<h1 id="连接github"><a href="#连接github" class="headerlink" title="连接github"></a>连接github</h1><p> nam install heao-deployer-git —save</p>
-<p> _config.yml<br>    deploy:<br>     type: git<br>     repo: <a href="https://github.com/name/name.io.git" target="_blank" rel="external">https://github.com/name/name.io.git</a><br>     branch: master<br>    这个东西格式很重要。</p>
-<pre><code>hero deploy 同步
-</code></pre><h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><pre><code>hero clean
-hero generate （g）
-hero deploy (d)
-</code></pre><p>删除文章 在source-&gt;_posts 中把文章给删除了 再clean 然后重新hexo g ,hexo d就可以。</p>
+        <p>其实.bind(), .live(), .delegate()都是通过.on()来实现的  </p>
+<h3 id="stopPropagation-函数用于阻止当前事件在DOM树上冒泡。该函数只阻止事件向祖辈元素的传播，不会阻止该元素自身绑定的其他事件处理函数的函数。"><a href="#stopPropagation-函数用于阻止当前事件在DOM树上冒泡。该函数只阻止事件向祖辈元素的传播，不会阻止该元素自身绑定的其他事件处理函数的函数。" class="headerlink" title="stopPropagation()函数用于阻止当前事件在DOM树上冒泡。该函数只阻止事件向祖辈元素的传播，不会阻止该元素自身绑定的其他事件处理函数的函数。"></a>stopPropagation()函数用于阻止当前事件在DOM树上冒泡。该函数只阻止事件向祖辈元素的传播，不会阻止该元素自身绑定的其他事件处理函数的函数。</h3><h3 id="event-stopImmediatePropagation-不仅会阻止事件向祖辈元素的传播，还会阻止该元素绑定的其他-尚未执行的-事件处理函数的执行。"><a href="#event-stopImmediatePropagation-不仅会阻止事件向祖辈元素的传播，还会阻止该元素绑定的其他-尚未执行的-事件处理函数的执行。" class="headerlink" title="event.stopImmediatePropagation()不仅会阻止事件向祖辈元素的传播，还会阻止该元素绑定的其他(尚未执行的)事件处理函数的执行。"></a>event.stopImmediatePropagation()不仅会阻止事件向祖辈元素的传播，还会阻止该元素绑定的其他(尚未执行的)事件处理函数的执行。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//为所有button元素绑定click事件</div><div class="line">$(&quot;:button&quot;).click( function(event)&#123;</div><div class="line">    alert(&quot;button-click&quot;);</div><div class="line">    // 阻止事件冒泡到DOM树上</div><div class="line">    event.stopPropagation(); // 只执行button的click，如果注释掉该行，将执行button、p和div的click   </div><div class="line">&#125; );</div><div class="line"></div><div class="line"></div><div class="line">// 为div元素内的所有button元素的click事件绑定处理函数</div><div class="line">$(&quot;div&quot;).live(&quot;click&quot;, &quot;:button&quot;, function(event)&#123;</div><div class="line">    alert(&quot;button-click&quot;);</div><div class="line">    event.stopPropagation();</div><div class="line">&#125; );</div><div class="line">// 点击按钮，所有事件处理函数都会执行</div><div class="line">// 因为live()函数先直接冒泡到document，然后再来触发事件，因此它无法阻止事件冒泡(执行函数时都已经冒泡完毕，当然无法阻止)</div><div class="line"></div><div class="line">// 为div元素内的所有button元素的click事件绑定处理函数</div><div class="line">$(&quot;div&quot;).delegate(&quot;:button&quot;, &quot;click&quot;, function(event)&#123;</div><div class="line">    alert(&quot;button-click&quot;);</div><div class="line">    event.stopPropagation();</div><div class="line">&#125; );</div><div class="line">// 点击按钮，会执行p-click和button-click</div><div class="line">// 因为delegate()函数会把button元素的点击事件委托给div元素来触发，所以事件必须冒泡到div元素才能触发，它无法阻止button到div之间的事件冒泡，所以会执行p-click。</div></pre></td></tr></table></figure>
+<h2 id="总结-如下"><a href="#总结-如下" class="headerlink" title="总结:如下"></a>总结:如下</h2><p>1、”stopPropagation()函数无法阻止live事件的冒泡。”</p>
+<p>2、”stopPropagation()函数无法阻止该元素到”受委托”的祖辈元素之间的事件冒泡。”</p>
+<p>1、$(“#id”).on(“click”, function(event){ event.stopPropagation(); }); 这样是可以阻止#id元素向外进行事件冒泡的。</p>
+<p>$(“#wrapper”).on(“click”, “#id”, function(event){ event.stopPropagation(); ); </p>
+<p>但是如果on()采用的是类似上述的事件委托机制来处理，那么是无法阻止#id到外部#wrapper之间的事件冒泡的，只能阻止#wrapper到document的事件冒泡。</p>
+<p>所以说，不管是delegate、live、还是on，只要是采用事件委托机制，那么目标元素到受委托的“祖辈”元素之间的事件冒泡，stopPropagation()是无法阻止的，这种情况是存在的哦。</p>
 
       
     </div>
@@ -272,15 +246,11 @@ hero deploy (d)
     
 <nav id="article-nav">
   
-    <a href="/2016/07/07/前端工程师面试题汇总/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          前端工程师面试题汇总
-        
-      </div>
-    </a>
   
+    <a href="/2016/10/09/JS-事件对象/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS-事件对象</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
